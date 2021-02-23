@@ -9,3 +9,26 @@ body {
 	height: 100vh;
 	background-color: #5f27cd;
 }
+
+h1, p, button {
+	font-family: "Merriweather", serif;
+	color: white;
+}
+
+button {
+	background-color: #6c2cec;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+button:hover {
+	background-color: #341f97;
+}
+
+button.greek-option, .greek {
+	font-family: 'Cardo', serif;
+}
