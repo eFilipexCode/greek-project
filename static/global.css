@@ -23,12 +23,69 @@ button {
 	font-size: 1em;
 	cursor: pointer;
 	transition: all 0.2s;
+	-webkit-box-shadow: 0px 6px 0px #341f97;
+	-moz-box-shadow: 0px 6px 0px #341f97;
+	box-shadow: 0px 6px 0px #341f97;
+	transition: all 0.2s;
+}
+
+button:active {
+	transform: translateY(5px);	
 }
 
 button:hover {
-	background-color: #341f97;
+	background-color: #4a2497;
 }
 
 button.greek-option, .greek {
 	font-family: 'Cardo', serif;
+}
+
+main.container-game {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	transition: all 0.2s;
+	display: flex;
+	flex-direction: column;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+.options-screen {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+.options-letters {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 100%;
+	padding: 10px;
+}
+
+main div>p.option-show {
+	font-size: 5rem;
+}
+
+div.options-letters .option {
+	width: 150px;
+	height: 65px;
+	font-size: 20pt;
+	margin: 10px;
+}
+
+p.command {
+	text-align: center;
+}
+
+@media (min-width: 700px) {
+	.options-letters {
+		justify-content: center;
+	}
 }
