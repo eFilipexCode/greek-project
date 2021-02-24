@@ -8,4 +8,4 @@ A little project for greek learners made with svelte and sapper.
 ![Greek Project](transliteration.PNG)
 
 ### Words: 
-![Greek Project](transliteration.PNG)
+![Greek Project](words.PNG)
