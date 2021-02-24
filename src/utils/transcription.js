@@ -1,0 +1,28 @@
+const transcription = [
+    { uppercase: "A", lowercase: "a" },
+    { uppercase: "B", lowercase: "b" },
+    { uppercase: "G", lowercase: "g" },
+    { uppercase: "D", lowercase: "d" },
+    { uppercase: "E", lowercase: "e" },
+    { uppercase: "Z", lowercase: "z" },
+    { uppercase: "E", lowercase: "e" },
+    { uppercase: "TH", lowercase: "" },
+    { uppercase: "I", lowercase: "i" },
+    { uppercase: "K", lowercase: "k" },
+    { uppercase: "L", lowercase: "l" },
+    { uppercase: "M", lowercase: "m" },
+    { uppercase: "N", lowercase: "n" },
+    { uppercase: "X", lowercase: "x" },
+    { uppercase: "O", lowercase: "o" },
+    { uppercase: "P", lowercase: "p" },
+    { uppercase: "RHO", lowercase: "" },
+    { uppercase: "S", lowercase: "s" },
+    { uppercase: "T", lowercase: "t" },
+    { uppercase: "Y", lowercase: "y" },
+    { uppercase: "PHI", lowercase: "" },
+    { uppercase: "CH", lowercase: "" },
+    { uppercase: "PS", lowercase: "" },
+    { uppercase: "O", lowercase: "o" },
+];
+
+export default transcription;
