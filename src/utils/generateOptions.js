@@ -2,15 +2,13 @@
 import selectRandomIndex from './selectRandomIndex';
 import shuffle from '../utils/arrayShuffle';
 
-export default function generateOptions(answersArray, recentSubject) {
+export default function generateOptions(answersArray, recentSubject, comparingParameter, comparingParameterOptional) {
     const newOptions = [];
-    const answersKeeper = [...answersArray];
-    const shuffledArray = shuffle(answersArray);
     for (let i = 0; i < 3; i++) {
-        let randomIndexOption = selectRandomIndex(shuffledArray);
+        let randomIndexOption = selectRandomIndex(answersArray);
         //Check if there's already another option with the same data.
-        for (let index = 0; index < newOptions.length - 1; index++) {
-            if (newOptions[randomIndexOption] === shuffledArray[randomIndexOption]) {
+        for (let index = 0; index < newOptions.length; index++) {
+            if (newOptions[randomIndexOption] === answersArray[randomIndexOption]) {
                 randomIndexOption++;
             };
         }
@@ -18,12 +16,16 @@ export default function generateOptions(answersArray, recentSubject) {
         if (randomIndexOption === recentSubject) {
             i--;
         } else {
-            newOptions.push(shuffledArray[randomIndexOption]);
+            newOptions.push(answersArray[randomIndexOption]);
         };
     };
 
-    const correct = shuffledArray.filter((item) => {
-        return item === answersKeeper[recentSubject];
+    const correct = answersArray.filter((item) => {
+        if (!comparingParameterOptional) {
+            return item[`${comparingParameter}`] === answersArray[recentSubject][`${comparingParameter}`];
+        } else {
+            return item[`${comparingParameter}`] === answersArray[recentSubject][`${comparingParameter}`] && item[`${comparingParameterOptional}`] === answersArray[recentSubject][`${comparingParameterOptional}`];
+        };
     })[0];
     newOptions.push(correct);
     shuffle(newOptions);
