@@ -1,28 +1,41 @@
 <script>
-    import selectRandomIndex from '../utils/selectRandomIndex';;
-    import greekAlphabet from '../utils/greekAlphabet';
-    import transcription from '../utils/transcription';
-    import generateOptions from '../utils/generateOptions';
+    import selectRandomIndex from "../utils/selectRandomIndex";
+    import greekAlphabet from "../utils/greekAlphabet";
+    import transcription from "../utils/transcription";
+    import generateOptions from "../utils/generateOptions";
+    import checkAnswer from "../utils/checkAnswer";
 
     let recentLetterIndex = selectRandomIndex(greekAlphabet);
-    let letterOptions = generateOptions(transcription, recentLetterIndex, 'uppercase', 'lowercase');
+    let letterOptions = generateOptions(
+        transcription,
+        recentLetterIndex,
+        "uppercase",
+        "lowercase"
+    );
 
-    let colorAnswer = '#5f27cd';
-    function checkAnswer(index) {
-        if (index === recentLetterIndex) {
-            colorAnswer = '#2ecc71';
-            setTimeout(() => {
-                colorAnswer = '#5f27cd'
-            }, 500);
+    let colorAnswer = "#5f27cd";
+
+    function changeBg(correct) {
+        correct ? (colorAnswer = "#2ecc71") : (colorAnswer = "#e74c3c");
+        setTimeout(() => {
+            colorAnswer = "#5f27cd";
+        }, 500);
+    }
+
+    function handleCheckAnswers(option) {
+        if (checkAnswer(transcription.indexOf(option), recentLetterIndex)) {
+            changeBg(true);
             recentLetterIndex = selectRandomIndex(greekAlphabet);
-            letterOptions = generateOptions(transcription, recentLetterIndex, 'uppercase', 'lowercase');
-        } else if (index !== recentLetterIndex){
-            colorAnswer = '#e74c3c';
-            setTimeout(() => {
-                colorAnswer = '#5f27cd'
-            }, 500);
-        };
-    };
+            letterOptions = generateOptions(
+                transcription,
+                recentLetterIndex,
+                "uppercase",
+                "lowercase"
+            );
+        } else {
+            changeBg(false);
+        }
+    }
 </script>
 
 <main class="container-game" style={`background-color: ${colorAnswer}`}>
@@ -36,8 +49,11 @@
     <p class="command">Corresponds to...</p>
     <div class="options-letters">
         {#each letterOptions as option}
-            <button class="greek-option option animate__animated animate__fadeInUp" on:click={e => checkAnswer(transcription.indexOf(option))}
-                >{option.uppercase}{option.lowercase}</button>
+            <button
+                class="greek-option option animate__animated animate__fadeInUp"
+                on:click={(e) => handleCheckAnswers(option)}
+                >{option.uppercase}{option.lowercase}</button
+            >
         {/each}
     </div>
 </main>

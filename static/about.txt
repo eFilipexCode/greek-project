@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Cardo
-- Font Author: Copyright (c) 2002-2011, David J. Perry (hospes02@scholarsfonts.net)
-- Font Source: http://fonts.gstatic.com/s/cardo/v13/wlp_gwjKBV1pqiv_1oAZ2H5O.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

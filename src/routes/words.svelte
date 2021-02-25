@@ -2,27 +2,29 @@
     import words from "../utils/words";
     import selectRandomIndex from "../utils/selectRandomIndex";
     import generateOptions from "../utils/generateOptions";
+    import checkAnswer from "../utils/checkAnswer";
 
     let wordIndex = selectRandomIndex(words);
     const answers = words.map((word) => {
         return { traduction: word.traduction };
     });
-    let wordOptions = generateOptions(answers, wordIndex, 'traduction');
+    let wordOptions = generateOptions(answers, wordIndex, "traduction");
 
     let colorAnswer = "#5f27cd";
-    function checkAnswer(index, e) {
-        if (answers[index].traduction === words[wordIndex].traduction) {
-            colorAnswer = "#2ecc71";
-            setTimeout(() => {
-                colorAnswer = "#5f27cd";
-            }, 500);
+    function changeBg(correct) {
+        correct ? colorAnswer = '#2ecc71' : colorAnswer = "#e74c3c";
+        setTimeout(() => {
+            colorAnswer = "#5f27cd";
+        }, 500);
+    }
+
+    function handleCheckAnswers(option) {
+        if (checkAnswer(answers.indexOf(option), wordIndex)) {
+            changeBg(true);
             wordIndex = selectRandomIndex(words);
-            wordOptions = generateOptions(answers, wordIndex, 'traduction');
-        } else if (index !== wordIndex) {
-            colorAnswer = "#e74c3c";
-            setTimeout(() => {
-                colorAnswer = "#5f27cd";
-            }, 500);
+            wordOptions = generateOptions(answers, wordIndex, "traduction");
+        } else {
+            changeBg(false);
         }
     }
 </script>
@@ -42,7 +44,7 @@
         {#each wordOptions as option}
             <button
                 class="greek-option option animate__animated animate__fadeInUp"
-                on:click={(e) => checkAnswer(answers.indexOf(option), e)}
+                on:click={(e) => handleCheckAnswers(option)}
                 >{option.traduction}</button
             >
         {/each}
