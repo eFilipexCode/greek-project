@@ -3,9 +3,9 @@ const transcription = [
     { uppercase: "B", lowercase: "b" },
     { uppercase: "G", lowercase: "g" },
     { uppercase: "D", lowercase: "d" },
-    { uppercase: "E", lowercase: "e" },
+    { uppercase: "E", lowercase: "ĕ" },
     { uppercase: "Z", lowercase: "z" },
-    { uppercase: "E", lowercase: "e" },
+    { uppercase: "E", lowercase: "ē" },
     { uppercase: "TH", lowercase: "" },
     { uppercase: "I", lowercase: "i" },
     { uppercase: "K", lowercase: "k" },
@@ -13,7 +13,7 @@ const transcription = [
     { uppercase: "M", lowercase: "m" },
     { uppercase: "N", lowercase: "n" },
     { uppercase: "X", lowercase: "x" },
-    { uppercase: "O", lowercase: "o" },
+    { uppercase: "O", lowercase: "ŏ" },
     { uppercase: "P", lowercase: "p" },
     { uppercase: "RHO", lowercase: "" },
     { uppercase: "S", lowercase: "s" },
@@ -22,7 +22,7 @@ const transcription = [
     { uppercase: "PHI", lowercase: "" },
     { uppercase: "CH", lowercase: "" },
     { uppercase: "PS", lowercase: "" },
-    { uppercase: "O", lowercase: "o" },
+    { uppercase: "O", lowercase: "ō" },
 ];
 
 export default transcription;
