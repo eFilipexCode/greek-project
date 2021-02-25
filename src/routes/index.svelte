@@ -1,23 +1,33 @@
 <script>
 	import circle from "images/circle.png";
 	import pillar from "images/pillar.png";
-	import greece from 'images/greece.jpg';
+	import Button from "../components/Button.svelte";
 </script>
 
 <svelte:head>
-	<title>Greek Project</title>
+	<title>Greek Project - μάθησις</title>
 </svelte:head>
 
 <main id="initial-screen">
 	<div class="animate__animated animate__fadeInUp">
 		<img src={circle} alt="Circle" class="circle" />
-		<h1>Greek Project</h1>
-		<p><strong>A little project for greek learners.</strong></p>
-		<a href="/select">
-			<button>Get Started!</button>
-		</a>
-		<img src={pillar} alt="Pillar" class="pillar animate__animated animate__fadeInUp" />
+		<span class="greek title">μάθησις</span>
+		<h1>A greek project</h1>
+		<p><strong>A project for ancient greek learners.</strong></p>
+		<Button
+			linkUrl="/select"
+			text="Get started"
+			style={`width: 150px; height: 50px; margin:0`}
+		/>
+		<img
+			src={pillar}
+			alt="Pillar"
+			class="pillar animate__animated animate__fadeInUp"
+		/>
 		<p class="greek">"Σοφίαν ζήλου."</p>
+	</div>
+	<div class="credits">
+		<p>By <span class="greek">Φίλιππος</span></p>
 	</div>
 </main>
 
@@ -30,6 +40,7 @@
 		height: 100vh;
 		max-width: 100vw;
 		overflow: hidden;
+		position: relative;
 	}
 
 	#initial-screen div {
@@ -46,7 +57,7 @@
 		position: absolute;
 		opacity: 0.5;
 		z-index: -5;
-		transform: translateY(50%);
+		transform: translateY(55%);
 		top: 0%;
 		animation: rotate 15s linear infinite;
 		pointer-events: none;
@@ -55,14 +66,14 @@
 	#initial-screen img.pillar {
 		width: 300px;
 		position: absolute;
-		top: 80%;
+		top: 85%;
 		z-index: -3;
 		pointer-events: none;
 	}
 
 	#initial-screen h1 {
 		color: white;
-		font-size: 2.5em;
+		font-size: 2em;
 		margin: 10px 0px;
 	}
 
@@ -71,25 +82,48 @@
 		font-size: 1em;
 		margin: 10px 0px 40px 0px;
 	}
-
-	#initial-screen button {
-		width: 150px;
-		height: 50px;
-		margin: 0px 0px;
-	}
-
-	#initial-screen figure img {
-		width: 250px;
+	span.greek.title{
+		font-family: "Cardo", serif;
+		color: white;
+		font-size: 3em;
+		margin: 10px 0px;
 	}
 
 	#initial-screen p.greek {
 		color: white;
 		font-family: 2em;
 	}
+	#initial-screen div.credits {
+		position: absolute;
+		right: 0px;
+		bottom: 50%;
+		color: #fff;
+		width: 150px;
+		height: 40px;
+		padding: 10px;
+		background-color: #4a2497;
+		transform: rotate(270deg) translateY(140%);
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 15px 15px 0px 0px;
+		pointer-events: none;
+	}
+	#initial-screen div.credits p {
+		margin: 0px;
+	}
 
 	@media (min-width: 700px) {
 		#initial-screen figure img {
 			width: 350px;
+		}
+	}
+	@media (max-width: 400px) {
+		#initial-screen div.credits {
+			right: 50%;
+			bottom: 0%;
+			transform: rotate(0deg) translateX(50%) translateY(0%);
 		}
 	}
 
