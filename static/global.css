@@ -8,6 +8,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: #5f27cd;
+	overflow-x: hidden;
 }
 
 h1, p, button {
@@ -29,7 +30,7 @@ button {
 	transition: all 0.2s;
 }
 
-button:active {
+button:active, button.greek-option:active {
 	transform: translateY(5px);	
 }
 

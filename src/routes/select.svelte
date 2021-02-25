@@ -2,12 +2,12 @@
     let options = [
         { title: "Transliteration", link: "/transliteration" },
         { title: "Words", link: "/words" },
-        { title: "Sounds", link: "/sounds" },
+        { title: "Sentences", link: "/sentences" },
     ];
 </script>
 
 <svelte:head>
-    <title>Select</title>
+    <title>Greek Project - Select</title>
 </svelte:head>
 
 <main id="select-page">
@@ -74,10 +74,6 @@
         #select-page button.more-soon {
             width: 45%;
             margin: 10px;
-        }
-
-        button.back {
-            display: none;
         }
     }
 </style>

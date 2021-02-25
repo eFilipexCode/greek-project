@@ -1,6 +1,7 @@
 <script>
 	import circle from "images/circle.png";
 	import pillar from "images/pillar.png";
+	import greece from 'images/greece.jpg';
 </script>
 
 <svelte:head>
@@ -18,7 +19,6 @@
 		<img src={pillar} alt="Pillar" class="pillar animate__animated animate__fadeInUp" />
 		<p class="greek">"Σοφίαν ζήλου."</p>
 	</div>
-
 </main>
 
 <style>
@@ -76,14 +76,6 @@
 		width: 150px;
 		height: 50px;
 		margin: 0px 0px;
-	}
-
-	#initial-screen figure {
-		overflow: hidden;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	#initial-screen figure img {

@@ -1,6 +1,6 @@
-<script context="module">
-    let current;
-</script>
+<svelte:head>
+    Greek Project - Words
+</svelte:head>
 
 <script>
     import words from "../utils/words";
@@ -41,7 +41,7 @@
     <div class="options-letters">
         {#each wordOptions as option}
             <button
-                class="greek-option option"
+                class="greek-option option animate__animated animate__fadeInUp"
                 on:click={(e) => checkAnswer(answers.indexOf(option), e)}
                 >{option.traduction}</button
             >
