@@ -1,6 +1,6 @@
 <script>
-	import circle from "images/circle.png";
-	import pillar from "images/pillar.png";
+	import circle from "../images/circle.png";
+	import pillar from "../images/pillar.png";
 	import Button from "../components/Button.svelte";
 </script>
 
