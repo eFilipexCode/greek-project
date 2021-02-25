@@ -5,7 +5,7 @@
     import generateOptions from '../utils/generateOptions';
 
     let recentLetterIndex = selectRandomIndex(greekAlphabet);
-    let letterOptions = generateOptions(transcription, recentLetterIndex);
+    let letterOptions = generateOptions(transcription, recentLetterIndex, 'uppercase', 'lowercase');
 
     let colorAnswer = '#5f27cd';
     function checkAnswer(index) {
@@ -15,7 +15,7 @@
                 colorAnswer = '#5f27cd'
             }, 500);
             recentLetterIndex = selectRandomIndex(greekAlphabet);
-            letterOptions = generateOptions(transcription, recentLetterIndex);
+            letterOptions = generateOptions(transcription, recentLetterIndex, 'uppercase', 'lowercase');
         } else if (index !== recentLetterIndex){
             colorAnswer = '#e74c3c';
             setTimeout(() => {
