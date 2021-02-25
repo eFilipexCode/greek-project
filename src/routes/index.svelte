@@ -27,7 +27,7 @@
 		<p class="greek">"Σοφίαν ζήλου."</p>
 	</div>
 	<div class="credits">
-		<p>By <span class="greek">Φίλιππος</span></p>
+		<p>By <span class="greek"><a href="https://github.com/eFilipeCode" target="_blank">Φίλιππος</a></span></p>
 	</div>
 </main>
 
@@ -109,9 +109,15 @@
 		align-items: center;
 		border-radius: 15px 15px 0px 0px;
 		pointer-events: none;
+		transition: all 0.2s
 	}
 	#initial-screen div.credits p {
 		margin: 0px;
+	}
+	#initial-screen div.credits a {
+		pointer-events: all;
+		color: #fff;
+		text-decoration: none;
 	}
 
 	@media (min-width: 700px) {
