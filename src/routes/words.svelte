@@ -1,7 +1,3 @@
-<svelte:head>
-    Greek Project - Words
-</svelte:head>
-
 <script>
     import words from "../utils/words";
     import selectRandomIndex from "../utils/selectRandomIndex";
@@ -11,17 +7,17 @@
     const answers = words.map((word) => {
         return { traduction: word.traduction };
     });
-    let wordOptions = generateOptions(answers, wordIndex);
+    let wordOptions = generateOptions(answers, wordIndex, 'traduction');
 
     let colorAnswer = "#5f27cd";
     function checkAnswer(index, e) {
-        if (index === wordIndex) {
+        if (answers[index].traduction === words[wordIndex].traduction) {
             colorAnswer = "#2ecc71";
             setTimeout(() => {
                 colorAnswer = "#5f27cd";
             }, 500);
             wordIndex = selectRandomIndex(words);
-            wordOptions = generateOptions(answers, wordIndex);
+            wordOptions = generateOptions(answers, wordIndex, 'traduction');
         } else if (index !== wordIndex) {
             colorAnswer = "#e74c3c";
             setTimeout(() => {
@@ -30,6 +26,10 @@
         }
     }
 </script>
+
+<svelte:head>
+    <title>Greek Project - Words</title>
+</svelte:head>
 
 <main class="container-game" style={`background: ${colorAnswer}`}>
     <div class="options-screen">
