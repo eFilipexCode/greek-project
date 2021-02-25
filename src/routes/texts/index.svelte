@@ -1,5 +1,5 @@
 <script>
-import NotAvailableYet from '../components/NotAvailableYet.svelte';
+import NotAvailableYet from '../../components/NotAvailableYet.svelte';
 </script>
 
 <svelte:head>
