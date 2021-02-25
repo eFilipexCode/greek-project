@@ -3,6 +3,8 @@
         { title: "Transliteration", link: "/transliteration" },
         { title: "Words", link: "/words" },
         { title: "Sentences", link: "/sentences" },
+        { title: "Cases", link: "/cases" },
+        { title: "Texts", link: "/texts" },
     ];
 </script>
 
