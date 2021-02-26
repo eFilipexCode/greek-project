@@ -125,7 +125,7 @@
 			width: 350px;
 		}
 	}
-	@media (max-width: 400px) {
+	@media (max-width: 530px) {
 		#initial-screen div.credits {
 			right: 50%;
 			bottom: 0%;
