@@ -64,10 +64,11 @@ main.container-game {
 .options-letters {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 	max-width: 100%;
 	padding: 10px;
+	height: 50%;
 }
 
 main div>p.option-show {
@@ -85,8 +86,20 @@ p.command {
 	text-align: center;
 }
 
-@media (min-width: 700px) {
+@media (max-width: 600px) {
+	.options-letters button.greek-option {
+		width: 100%;
+		min-height: 60px;
+	}
 	.options-letters {
+		height: 60%;
+		flex-direction: column;
 		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+
+	.options-screen {
+		height: 40%;
 	}
 }
