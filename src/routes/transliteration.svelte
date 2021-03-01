@@ -4,6 +4,7 @@
     import transcription from "../utils/transcription";
     import generateOptions from "../utils/generateOptions";
     import checkAnswer from "../utils/checkAnswer";
+    import playCorrectSound from "../utils/playCorrectSound.js";
 
     let recentLetterIndex = selectRandomIndex(greekAlphabet);
     let letterOptions = generateOptions(
@@ -24,6 +25,7 @@
 
     function handleCheckAnswers(option) {
         if (checkAnswer(transcription.indexOf(option), recentLetterIndex)) {
+            playCorrectSound(true);
             changeBg(true);
             recentLetterIndex = selectRandomIndex(greekAlphabet);
             letterOptions = generateOptions(
@@ -34,6 +36,7 @@
             );
         } else {
             changeBg(false);
+            playCorrectSound(false);
         }
     }
 </script>

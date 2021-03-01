@@ -3,6 +3,7 @@
     import selectRandomIndex from "../utils/selectRandomIndex";
     import generateOptions from "../utils/generateOptions";
     import checkAnswer from "../utils/checkAnswer";
+    import playCorrectSound from '../utils/playCorrectSound';
 
     let wordIndex = selectRandomIndex(words);
     const answers = words.map((word) => {
@@ -20,11 +21,13 @@
 
     function handleCheckAnswers(option) {
         if (checkAnswer(answers.indexOf(option), wordIndex)) {
+            playCorrectSound(true);
             changeBg(true);
             wordIndex = selectRandomIndex(words);
             wordOptions = generateOptions(answers, wordIndex, "traduction");
         } else {
             changeBg(false);
+            playCorrectSound(false);
         }
     }
 </script>
