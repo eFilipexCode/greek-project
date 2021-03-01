@@ -1,6 +1,4 @@
 <script>
-	import circle from "../images/circle.png";
-	import pillar from "../images/pillar.png";
 	import Button from "../components/Button.svelte";
 </script>
 
@@ -10,7 +8,7 @@
 
 <main id="initial-screen">
 	<div class="animate__animated animate__fadeInUp">
-		<img src={circle} alt="Circle" class="circle" />
+		<img src='/circle.png' alt="Circle" class="circle" />
 		<span class="greek title">μάθησις</span>
 		<h1>A greek project</h1>
 		<p><strong>A project for ancient greek learners.</strong></p>
@@ -20,7 +18,7 @@
 			style={`width: 150px; height: 50px; margin:0`}
 		/>
 		<img
-			src={pillar}
+			src='/pillar.png'
 			alt="Pillar"
 			class="pillar animate__animated animate__fadeInUp"
 		/>
