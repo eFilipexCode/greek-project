@@ -42,6 +42,10 @@
     }
 </script>
 
+<svelte:head>
+    <title> Greek Project - TransliterationM </title>
+</svelte:head>
+
 <main class="container-game" style={`background-color: ${colorAnswer}`}>
     <Button linkUrl='/select' text='Back' style={`position: absolute; left: 0px; top: 0px; margin: 30px; padding: 10px;`}/>
     <div class="options-screen">
