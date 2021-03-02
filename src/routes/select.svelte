@@ -1,4 +1,5 @@
 <script>
+    import Button from "../components/Button.svelte";
     let options = [
         { title: "Transliteration", link: "/transliteration" },
         { title: "Words", link: "/words" },
@@ -20,9 +21,13 @@
                 <button>{i + 1} - {option.title}</button>
             </a>
         {/each}
-        <button class="more-soon animate__animated animate__fadeInUp">More soon...</button>
+        <button class="more-soon animate__animated animate__fadeInUp"
+            >More soon...</button
+        >
         <a href="/">
-            <button class="back animate__animated animate__fadeInUp">Back</button>
+            <button class="back animate__animated animate__fadeInUp"
+                >Back</button
+            >
         </a>
     </div>
 </main>

@@ -5,16 +5,14 @@
     export let style;
 </script>
 
-<button>
-    {#if linkUrl}
-        <a href={linkUrl}>
-            <button {style} class={className}>
-                {text}
-            </button>
-        </a>
-    {:else}
+{#if linkUrl}
+    <a href={linkUrl}>
         <button {style} class={className}>
             {text}
         </button>
-    {/if}
-</button>
+    </a>
+{:else}
+    <button {style} class={className}>
+        {text}
+    </button>
+{/if}

@@ -3,7 +3,8 @@
     import selectRandomIndex from "../utils/selectRandomIndex";
     import generateOptions from "../utils/generateOptions";
     import checkAnswer from "../utils/checkAnswer";
-    import playCorrectSound from '../utils/playCorrectSound';
+    import playCorrectSound from "../utils/playCorrectSound";
+    import Button from "../components/Button.svelte";
 
     let wordIndex = selectRandomIndex(words);
     const answers = words.map((word) => {
@@ -13,7 +14,7 @@
 
     let colorAnswer = "#5f27cd";
     function changeBg(correct) {
-        correct ? colorAnswer = '#2ecc71' : colorAnswer = "#e74c3c";
+        correct ? (colorAnswer = "#2ecc71") : (colorAnswer = "#e74c3c");
         setTimeout(() => {
             colorAnswer = "#5f27cd";
         }, 500);
@@ -37,6 +38,11 @@
 </svelte:head>
 
 <main class="container-game" style={`background: ${colorAnswer}`}>
+    <Button
+        linkUrl="/select"
+        text="Back"
+        style={`position: absolute; left: 0px; top: 0px; margin: 30px; padding: 10px;`}
+    />
     <div class="options-screen">
         <p class="greek option-show-word">
             {words[wordIndex].word}

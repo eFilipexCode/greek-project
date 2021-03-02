@@ -15,7 +15,7 @@
 		<Button
 			linkUrl="/select"
 			text="Get started"
-			style={`width: 150px; height: 50px; margin:0`}
+		style={`width: 150px; height: 50px; margin: 0px`}
 		/>
 		<img
 			src='/pillar.png'

@@ -5,6 +5,7 @@
     import generateOptions from "../utils/generateOptions";
     import checkAnswer from "../utils/checkAnswer";
     import playCorrectSound from "../utils/playCorrectSound.js";
+    import Button from "../components/Button.svelte";
 
     let recentLetterIndex = selectRandomIndex(greekAlphabet);
     let letterOptions = generateOptions(
@@ -42,6 +43,7 @@
 </script>
 
 <main class="container-game" style={`background-color: ${colorAnswer}`}>
+    <Button linkUrl='/select' text='Back' style={`position: absolute; left: 0px; top: 0px; margin: 30px; padding: 10px;`}/>
     <div class="options-screen">
         <p class="greek option-show-letter ">
             {greekAlphabet[recentLetterIndex].uppercase}{greekAlphabet[
@@ -65,4 +67,11 @@
     p.option-show-letter {
         font-size: 10rem;
     }
+
+    @media (max-width: 600px) {
+        p.option-show-letter {
+        font-size: 8rem;
+    }
+
+}
 </style>

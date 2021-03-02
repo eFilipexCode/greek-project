@@ -51,6 +51,7 @@ main.container-game {
 	flex-direction: column;
 	max-width: 100vw;
 	overflow-x: hidden;
+	position: relative;
 }
 
 .options-screen {
@@ -101,5 +102,6 @@ p.command {
 
 	.options-screen {
 		height: 40%;
+		overflow: hidden;
 	}
 }
