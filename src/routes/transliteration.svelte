@@ -43,7 +43,7 @@
 </script>
 
 <svelte:head>
-    <title> Greek Project - TransliterationM </title>
+    <title> Greek Project - Transliteration </title>
 </svelte:head>
 
 <main class="container-game" style={`background-color: ${colorAnswer}`}>
