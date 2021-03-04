@@ -31,7 +31,7 @@ button {
 }
 
 button:active, button.greek-option:active {
-	transform: translateY(5px);	
+	transform: translateY(5px);
 }
 
 button:hover {
@@ -87,6 +87,14 @@ p.command {
 	text-align: center;
 }
 
+button.back-button {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin: 30px;
+	padding: 10px;
+}
+
 @media (max-width: 600px) {
 	.options-letters button.greek-option {
 		width: 100%;
@@ -99,9 +107,11 @@ p.command {
 		align-items: center;
 		flex-wrap: nowrap;
 	}
-
 	.options-screen {
 		height: 40%;
 		overflow: hidden;
+	}
+	button.back-button {
+		margin: 10px;
 	}
 }
