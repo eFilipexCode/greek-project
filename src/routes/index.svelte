@@ -25,7 +25,7 @@
 		<p class="greek">"Σοφίαν ζήλου."</p>
 	</div>
 	<div class="credits">
-		<p>By <span class="greek"><a href="https://github.com/eFilipeCode" target="_blank">Φίλιππος</a></span></p>
+		<p>By <span class="greek"><a href="https://efilipex.netlify.app" target="_blank">Φίλιππος</a></span></p>
 	</div>
 </main>
 
