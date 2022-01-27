@@ -10,8 +10,8 @@
 	<div class="animate__animated animate__fadeInUp">
 		<img src='/circle.png' alt="Circle" class="circle" />
 		<span class="greek title">μάθησις</span>
-		<h1>Greek Project</h1>
-		<p><strong>A project for ancient greek learners.</strong></p>
+		<h1>Greek Mathesis</h1>
+		<p><strong>Free Ancient Greek Education</strong></p>
 		<Button
 			linkUrl="/select"
 			text="Get started"
